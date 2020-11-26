@@ -112,7 +112,7 @@
     transition: all 0.3s ease;
 }
 
-@media screen and ( max-width : 960px ) {
+@media screen and ( max-width:960px ) {
 
     .navbar_container {
         display: flex;
@@ -125,6 +125,9 @@
 
     .navbar_menu {
         display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
         grid-template-columns: auto;
         margin: 0;
         width: 100%;
@@ -136,9 +139,13 @@
     }
 
     .navbar_menu.active {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
         background: rgb(149, 4, 67);
         background: radial-gradient(circle, rgb(253, 82, 156) 0%, rgb(145, 190, 241) 100%); 
         top: 100%;
+        width: 100%;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
@@ -155,7 +162,7 @@
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease-in-out;
-        background: rgb(0, 0, 0);
+        background: #fff;
     }
 
     .navbar_items {
@@ -164,7 +171,7 @@
 
     .navbar_links {
         text-align: center;
-        padding: 2rem;
+        /* padding: 2rem; */
         width: 100%;
         display: table;
 
@@ -172,7 +179,12 @@
     }
 
     .navbar_btn {
+        display: flex;
         padding-bottom: 2rem;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
 
     }
 
@@ -180,32 +192,30 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80px;
-        height: 80px;
+        align-content: center;
+        width: 100%;
+        height: auto;
         margin: 0;
     }
 
-    #mobile_menu {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5% , 20%);
 
 
-    }
 
     .navbar_toggle .bar {
         display: block;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
         cursor: pointer;
     }
 
-    #mobile_menu.is-active ,bar:nth-child(2){
+    #mobile_menu.is-active .bar:nth-child(2){
         opacity: 0;
     }
-    #mobile_menu.is-active ,bar:nth-child(1){
+    #mobile_menu.is-active .bar:nth-child(1){
         transform: translateY(8px) rotate(45deg);
     }
-    #mobile_menu.is-active ,bar:nth-child(1){
+    #mobile_menu.is-active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
     
